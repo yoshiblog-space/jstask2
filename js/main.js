@@ -7,7 +7,12 @@
     const ul = document.querySelector('ul');
     const Fnum= Number(FN.value);
     const Bnum= Number(BN.value);
-    
+
+    while(ul.lastChild !== null){
+      ul.removeChild(ul.lastChild);
+
+    }
+
     
     if(Number.isInteger(Fnum) !== true || Number.isInteger(Bnum) !== true){
       const li = document.createElement('li');
